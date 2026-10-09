@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:mobilitydcatap="https://w3id.org/mobilitydcat-ap#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:geodcatap="http://data.europa.eu/930/"
+  xmlns:cnt="http://www.w3.org/2011/content#"
+  xmlns:dqv="http://www.w3.org/ns/dqv#"
+  xmlns:adms="http://www.w3.org/ns/adms#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcatap="http://data.europa.eu/r5r/"
+  xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:oa="http://www.w3.org/ns/oa#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <dcat:Catalog rdf:about="https://trafficdata.se/catalog">
+    <dct:title xml:lang="en">Trafficdata.se</dct:title>
+    <dct:description xml:lang="en">The portal Trafficdata.se is a national service in which we gather information on, and provide you with access to, traffic and road network data.</dct:description>
+    <foaf:homepage rdf:resource="https://trafficdata.se/"/>
+    <dct:publisher>
+      <foaf:Agent rdf:about="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b">
+        <foaf:name xml:lang="sv">Trafikverket</foaf:name>
+        <foaf:mbox rdf:resource="mailto:datex@trafikverket.se"/>
+        <foaf:workplaceHomepage rdf:resource="https://www.trafikverket.se"/>
+      </foaf:Agent>
+    </dct:publisher>
+    <dct:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+    <dcat:dataset>
+      <dcat:Dataset rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa">
+        <dct:title xml:lang="en">Traffic signs expressing traffic regulations and identifying dangers, Speed limits</dct:title>
+        <dct:description xml:lang="en">Traffic signs from the Swedish Transport Administration. Datex II format.</dct:description>
+        <dct:identifier>ec459578-a11f-4728-acaa-16b08ae45cfa</dct:identifier>
+        <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/TRAN"/>
+        <mobilitydcatap:mobilityTheme rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-traffic-signs-and-regulations"/>
+        <mobilitydcatap:mobilityTheme rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-theme/dynamic-speed-limits"/>
+        <dcatap:applicableLegislation rdf:resource="http://data.europa.eu/eli/reg_del/2022/670/oj"/>
+        <dcat:keyword xml:lang="en">Datex</dcat:keyword>
+        <dcat:keyword xml:lang="en">Act B</dcat:keyword>
+        <dcat:keyword xml:lang="en">Speed limits</dcat:keyword>
+        <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT"/>
+        <mobilitydcatap:networkCoverage rdf:resource="https://w3id.org/mobilitydcat-ap/network-coverage/motorways"/>
+        <mobilitydcatap:networkCoverage rdf:resource="https://w3id.org/mobilitydcat-ap/network-coverage/state-roads-or-federal-roads"/>
+        <dct:spatial rdf:resource="http://publications.europa.eu/resource/authority/country/SWE"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-09T11:49:47</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-04T09:48:27</dct:modified>
+        <dct:publisher rdf:resource="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"/>
+        <dcat:contactPoint>
+          <vcard:Kind rdf:nodeID="n11b4ec36303b4bf4bb707c8e875e5911b2">
+            <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+            <vcard:hasEmail rdf:resource="mailto:datex@trafikverket.se"/>
+            <vcard:fn>Trafikverket</vcard:fn>
+          </vcard:Kind>
+        </dcat:contactPoint>
+        <geodcatap:referenceSystem rdf:resource="http://www.opengis.net/def/crs/EPSG/0/4326"/>
+        <mobilitydcatap:assessmentResult>
+          <mobilitydcatap:Assessment rdf:nodeID="n11b4ec36303b4bf4bb707c8e875e5911b3">
+            <oa:hasBody>
+              <oa:TextualBody rdf:nodeID="n11b4ec36303b4bf4bb707c8e875e5911b4">
+                <rdf:value xml:lang="en">Assessment results available upon request</rdf:value>
+              </oa:TextualBody>
+            </oa:hasBody>
+          </mobilitydcatap:Assessment>
+        </mobilitydcatap:assessmentResult>
+        <mobilitydcatap:georeferencingMethod rdf:resource="https://w3id.org/mobilitydcat-ap/georeferencing-method/alert-c"/>
+        <dcat:hasVersion rdf:resource="https://trafficdata.se/dataset/e8bfc23e-646c-4fa8-9ccf-7a83096e1c05"/>
+        <dqv:hasQualityAnnotation>
+          <dqv:QualityAnnotation rdf:nodeID="n11b4ec36303b4bf4bb707c8e875e5911b5">
+            <oa:hasBody>
+              <oa:TextualBody rdf:nodeID="n11b4ec36303b4bf4bb707c8e875e5911b6">
+                <rdf:value xml:lang="en">Best effort</rdf:value>
+              </oa:TextualBody>
+            </oa:hasBody>
+          </dqv:QualityAnnotation>
+        </dqv:hasQualityAnnotation>
+        <dcat:inSeries>
+          <dcat:DatasetSeries rdf:nodeID="n11b4ec36303b4bf4bb707c8e875e5911b7">
+            <dct:title xml:lang="en">Speed limit dataset series</dct:title>
+            <dct:description xml:lang="en">This is a dataset series for the Speed Limits data.</dct:description>
+          </dcat:DatasetSeries>
+        </dcat:inSeries>
+        <mobilitydcatap:intendedInformationService rdf:resource="https://w3id.org/mobilitydcat-ap/intended-information-service/information-service"/>
+        <adms:identifier>
+          <adms:Identifier rdf:nodeID="n11b4ec36303b4bf4bb707c8e875e5911b8">
+            <skos:notation>SE-NAP-RTTI-Speed-limits</skos:notation>
+          </adms:Identifier>
+        </adms:identifier>
+        <foaf:page rdf:resource="https://data.trafikverket.se/documentation/datex/datamodel"/>
+        <dct:relation rdf:resource="https://trafficdata.se/dataset/e8bfc23e-646c-4fa8-9ccf-7a83096e1c05"/>
+        <dct:rightsHolder rdf:resource="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"/>
+        <dct:source rdf:resource="https://trafficdata.se/dataset/e8bfc23e-646c-4fa8-9ccf-7a83096e1c05"/>
+        <dct:temporal>
+          <dct:PeriodOfTime rdf:nodeID="n11b4ec36303b4bf4bb707c8e875e5911b9">
+            <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-08-12T00:00:00</dcat:startDate>
+            <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2030-12-31T23:59:59.999000</dcat:endDate>
+          </dct:PeriodOfTime>
+        </dct:temporal>
+        <mobilitydcatap:transportMode rdf:resource="https://w3id.org/mobilitydcat-ap/transport-mode/car"/>
+        <mobilitydcatap:transportMode rdf:resource="https://w3id.org/mobilitydcat-ap/transport-mode/truck"/>
+        <dcat:version>2.1</dcat:version>
+        <adms:versionNotes xml:lang="en">This is version 2.1 of this dataset.</adms:versionNotes>
+        <dcat:distribution rdf:resource="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d"/>
+      </dcat:Dataset>
+    </dcat:dataset>
+    <dct:hasPart rdf:resource="https://www.dataportal.se"/>
+    <dct:identifier>trafficdata.se</dct:identifier>
+    <adms:identifier>
+      <adms:Identifier rdf:nodeID="n11b4ec36303b4bf4bb707c8e875e5911b1">
+        <skos:notation>SE-NAP</skos:notation>
+      </adms:Identifier>
+    </adms:identifier>
+    <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <dct:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC0"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-10-01T00:00:00</dct:modified>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-01T00:00:00</dct:issued>
+    <dcat:themeTaxonomy rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-theme"/>
+    <dcat:record>
+      <dcat:CatalogRecord rdf:about="https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits">
+        <foaf:primaryTopic rdf:resource="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa"/>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-04</dct:issued>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-04</dct:modified>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dct:conformsTo rdf:resource="https://w3id.org/mobilitydcat-ap/releases/3.0.0"/>
+        <dct:publisher rdf:resource="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"/>
+        <dct:source rdf:resource="https://www.dataportal.se/en/dataservice/50_7006"/>
+      </dcat:CatalogRecord>
+    </dcat:record>
+  </dcat:Catalog>
+  <dcat:Distribution rdf:about="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d">
+    <dct:title xml:lang="en">Datex</dct:title>
+    <dct:description xml:lang="en">Datex is the Swedish Transport Administration resource.</dct:description>
+    <dcat:accessURL rdf:resource="http://www.trafikverket.se/tjanster/x/"/>
+    <dct:rights>
+      <dct:RightsStatement rdf:nodeID="n11b4ec36303b4bf4bb707c8e875e5911b10">
+        <dct:type rdf:resource="https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"/>
+      </dct:RightsStatement>
+    </dct:rights>
+    <dct:license rdf:resource="http://publications.europa.eu/resource/authority/licence/CC0"/>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+    <mobilitydcatap:mobilityDataStandard rdf:resource="https://w3id.org/mobilitydcat-ap/mobility-data-standard/datex-II"/>
+    <mobilitydcatap:mobilityDataStandard>
+      <mobilitydcatap:MobilityDataStandard rdf:about="https://www.trafficdata.se/standard/datex-II-v3.2">
+        <dct:title xml:lang="en">Datex II version 3.2</dct:title>
+        <dct:conformsTo rdf:resource="https://docs.datex2.eu/v3.2/_static/data/Exchange/2020/exchangexsd.zip"/>
+        <dcat:version>3.2</dcat:version>
+      </mobilitydcatap:MobilityDataStandard>
+    </mobilitydcatap:mobilityDataStandard>
+    <mobilitydcatap:applicationLayerProtocol rdf:resource="https://w3id.org/mobilitydcat-ap/application-layer-protocol/http-https"/>
+    <cnt:characterEncoding>UTF-16</cnt:characterEncoding>
+    <mobilitydcatap:communicationMethod rdf:resource="https://w3id.org/mobilitydcat-ap/communication-method/pull"/>
+    <dct:conformsTo rdf:resource="https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d/schema"/>
+    <mobilitydcatap:dataFormatNotes xml:lang="en">This distribution is formatted in DATEX II.</mobilitydcatap:dataFormatNotes>
+    <foaf:page rdf:resource="https://data.trafikverket.se/documentation/datex/datamodel"/>
+    <dcat:downloadURL rdf:resource="http://www.trafikverket.se/tjanster/x/"/>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-09T11:49:47</dct:issued>
+    <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-04T09:48:27</dct:modified>
+    <dcatap:applicableLegislation rdf:resource="http://data.europa.eu/eli/reg_del/2022/670/oj"/>
+    <adms:sample rdf:resource="http://www.trafikverket.se/tjanster/x/sample.xml"/>
+    <adms:status rdf:resource="http://publications.europa.eu/resource/authority/distribution-status/ONGOING"/>
+    <dct:temporal>
+      <dct:PeriodOfTime rdf:nodeID="n11b4ec36303b4bf4bb707c8e875e5911b11">
+        <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-08-12T00:00:00</dcat:startDate>
+        <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2030-12-31T23:59:59.999000</dcat:endDate>
+      </dct:PeriodOfTime>
+    </dct:temporal>
+  </dcat:Distribution>
+  <dct:Standard rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0"/>
+</rdf:RDF>
