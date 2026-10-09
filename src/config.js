@@ -14,7 +14,7 @@ var respecConfig = {
       ],
     copyrightStart: 2023,
     overrideCopyright: "<p>Copyright &copy; 2023-2026 NAPCORE. This document is licensed under a <a href='https://creativecommons.org/licenses/by/4.0/'>Creative Commons Attribution 4.0 License</a>.</p>",
-    publishDate: "2026-10-01",
+    publishDate: "2026-10-09",
 
     alternateFormats: [
     {
@@ -56,11 +56,11 @@ var respecConfig = {
     ],
     // errata:"https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/issues?q=is%3Aissue+label%3Aerrata",
     // Status for drafts is set to "unofficial" as it is visually more explicit that the spec is not stable: https://respec.org/docs/#specStatus
-    specStatus: "unofficial",
+    specStatus: "base",
     // Latest published version should point to releases, not the editor's draft
     latestVersion: "https://w3id.org/mobilitydcat-ap/releases/",
     shortName: "mobilitydcat-ap",
-    canonicalURI: "https://w3id.org/mobilitydcat-ap/drafts/latest/",
+    canonicalURI: "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
     prevRecURI: "https://w3id.org/mobilitydcat-ap/releases/1.1.0/",
 /* MOBILITYDCAT-AP specific - start */
     thisVersionURI:       "https://w3id.org/mobilitydcat-ap/releases/3.0.0/",
