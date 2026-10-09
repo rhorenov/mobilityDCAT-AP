@@ -30,22 +30,37 @@
     ],
     "http://www.w3.org/2002/07/owl#imports": [
       {
-        "@id": "https://w3id.org/mobilitydcat-ap/mobility-theme"
+        "@id": "http://publications.europa.eu/resource/authority/continent"
       },
       {
-        "@id": "https://w3id.org/mobilitydcat-ap/mobility-data-standard"
+        "@id": "http://publications.europa.eu/resource/authority/corporate-body"
       },
       {
-        "@id": "https://w3id.org/mobilitydcat-ap/network-coverage"
+        "@id": "http://publications.europa.eu/resource/authority/country"
       },
       {
-        "@id": "https://w3id.org/mobilitydcat-ap/transport-mode"
+        "@id": "http://publications.europa.eu/resource/authority/data-theme"
       },
       {
-        "@id": "https://w3id.org/mobilitydcat-ap/georeferencing-method"
+        "@id": "http://publications.europa.eu/resource/authority/distribution-status"
       },
       {
-        "@id": "https://w3id.org/mobilitydcat-ap/intended-information-service"
+        "@id": "http://publications.europa.eu/resource/authority/file-type"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/frequency"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/language"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/licence"
+      },
+      {
+        "@id": "http://publications.europa.eu/resource/authority/place"
+      },
+      {
+        "@id": "https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf"
       },
       {
         "@id": "https://w3id.org/mobilitydcat-ap/application-layer-protocol"
@@ -57,37 +72,22 @@
         "@id": "https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage"
       },
       {
-        "@id": "http://publications.europa.eu/resource/authority/frequency"
+        "@id": "https://w3id.org/mobilitydcat-ap/georeferencing-method"
       },
       {
-        "@id": "http://publications.europa.eu/resource/authority/file-type"
+        "@id": "https://w3id.org/mobilitydcat-ap/intended-information-service"
       },
       {
-        "@id": "http://publications.europa.eu/resource/authority/language"
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-data-standard"
       },
       {
-        "@id": "http://publications.europa.eu/resource/authority/distribution-status"
+        "@id": "https://w3id.org/mobilitydcat-ap/mobility-theme"
       },
       {
-        "@id": "http://publications.europa.eu/resource/authority/data-theme"
+        "@id": "https://w3id.org/mobilitydcat-ap/network-coverage"
       },
       {
-        "@id": "http://publications.europa.eu/resource/authority/continent"
-      },
-      {
-        "@id": "http://publications.europa.eu/resource/authority/country"
-      },
-      {
-        "@id": "http://publications.europa.eu/resource/authority/place"
-      },
-      {
-        "@id": "http://publications.europa.eu/resource/authority/corporate-body"
-      },
-      {
-        "@id": "http://publications.europa.eu/resource/authority/licence"
-      },
-      {
-        "@id": "https://github.com/SEMICeu/ADMS-AP/raw/master/purl.org/ADMS_SKOS_v1.00.rdf"
+        "@id": "https://w3id.org/mobilitydcat-ap/transport-mode"
       }
     ],
     "http://www.w3.org/2002/07/owl#versionInfo": [
