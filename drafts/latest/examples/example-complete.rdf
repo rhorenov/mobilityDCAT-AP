@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
+  xmlns:oa="http://www.w3.org/ns/oa#"
+  xmlns:mobilitydcatap="https://w3id.org/mobilitydcat-ap#"
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:dcatap="http://data.europa.eu/r5r/"
   xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:adms="http://www.w3.org/ns/adms#"
-  xmlns:dqv="http://www.w3.org/ns/dqv#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:mobilitydcatap="https://w3id.org/mobilitydcat-ap#"
+  xmlns:cnt="http://www.w3.org/2011/content#"
   xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dqv="http://www.w3.org/ns/dqv#"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
   xmlns:geodcatap="http://data.europa.eu/930/"
-  xmlns:oa="http://www.w3.org/ns/oa#"
-  xmlns:cnt="http://www.w3.org/2011/content#"
-  xmlns:dcatap="http://data.europa.eu/r5r/"
 >
   <dcat:Catalog rdf:about="https://trafficdata.se/catalog">
     <dct:title xml:lang="en">Trafficdata.se</dct:title>
@@ -47,7 +47,7 @@
         <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-04T09:48:27</dct:modified>
         <dct:publisher rdf:resource="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"/>
         <dcat:contactPoint>
-          <vcard:Kind rdf:nodeID="n809100d860d74c83a7d7efd928546c54b2">
+          <vcard:Kind rdf:nodeID="nc33c8d840da14b27b25bff8f466872fab2">
             <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
             <vcard:hasEmail rdf:resource="mailto:datex@trafikverket.se"/>
             <vcard:fn>Trafikverket</vcard:fn>
@@ -55,9 +55,9 @@
         </dcat:contactPoint>
         <geodcatap:referenceSystem rdf:resource="http://www.opengis.net/def/crs/EPSG/0/4326"/>
         <mobilitydcatap:assessmentResult>
-          <mobilitydcatap:Assessment rdf:nodeID="n809100d860d74c83a7d7efd928546c54b3">
+          <mobilitydcatap:Assessment rdf:nodeID="nc33c8d840da14b27b25bff8f466872fab3">
             <oa:hasBody>
-              <oa:TextualBody rdf:nodeID="n809100d860d74c83a7d7efd928546c54b4">
+              <oa:TextualBody rdf:nodeID="nc33c8d840da14b27b25bff8f466872fab4">
                 <rdf:value xml:lang="en">Assessment results available upon request</rdf:value>
               </oa:TextualBody>
             </oa:hasBody>
@@ -66,23 +66,23 @@
         <mobilitydcatap:georeferencingMethod rdf:resource="https://w3id.org/mobilitydcat-ap/georeferencing-method/alert-c"/>
         <dcat:hasVersion rdf:resource="https://trafficdata.se/dataset/e8bfc23e-646c-4fa8-9ccf-7a83096e1c05"/>
         <dqv:hasQualityAnnotation>
-          <dqv:QualityAnnotation rdf:nodeID="n809100d860d74c83a7d7efd928546c54b5">
+          <dqv:QualityAnnotation rdf:nodeID="nc33c8d840da14b27b25bff8f466872fab5">
             <oa:hasBody>
-              <oa:TextualBody rdf:nodeID="n809100d860d74c83a7d7efd928546c54b6">
+              <oa:TextualBody rdf:nodeID="nc33c8d840da14b27b25bff8f466872fab6">
                 <rdf:value xml:lang="en">Best effort</rdf:value>
               </oa:TextualBody>
             </oa:hasBody>
           </dqv:QualityAnnotation>
         </dqv:hasQualityAnnotation>
         <dcat:inSeries>
-          <dcat:DatasetSeries rdf:nodeID="n809100d860d74c83a7d7efd928546c54b7">
+          <dcat:DatasetSeries rdf:nodeID="nc33c8d840da14b27b25bff8f466872fab7">
             <dct:title xml:lang="en">Speed limit dataset series</dct:title>
             <dct:description xml:lang="en">This is a dataset series for the Speed Limits data.</dct:description>
           </dcat:DatasetSeries>
         </dcat:inSeries>
         <mobilitydcatap:intendedInformationService rdf:resource="https://w3id.org/mobilitydcat-ap/intended-information-service/information-service"/>
         <adms:identifier>
-          <adms:Identifier rdf:nodeID="n809100d860d74c83a7d7efd928546c54b8">
+          <adms:Identifier rdf:nodeID="nc33c8d840da14b27b25bff8f466872fab8">
             <skos:notation>SE-NAP-RTTI-Speed-limits</skos:notation>
           </adms:Identifier>
         </adms:identifier>
@@ -91,7 +91,7 @@
         <dct:rightsHolder rdf:resource="https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b"/>
         <dct:source rdf:resource="https://trafficdata.se/dataset/e8bfc23e-646c-4fa8-9ccf-7a83096e1c05"/>
         <dct:temporal>
-          <dct:PeriodOfTime rdf:nodeID="n809100d860d74c83a7d7efd928546c54b9">
+          <dct:PeriodOfTime rdf:nodeID="nc33c8d840da14b27b25bff8f466872fab9">
             <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-08-12T00:00:00</dcat:startDate>
             <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2030-12-31T23:59:59.999000</dcat:endDate>
           </dct:PeriodOfTime>
@@ -106,7 +106,7 @@
     <dct:hasPart rdf:resource="https://www.dataportal.se"/>
     <dct:identifier>trafficdata.se</dct:identifier>
     <adms:identifier>
-      <adms:Identifier rdf:nodeID="n809100d860d74c83a7d7efd928546c54b1">
+      <adms:Identifier rdf:nodeID="nc33c8d840da14b27b25bff8f466872fab1">
         <skos:notation>SE-NAP</skos:notation>
       </adms:Identifier>
     </adms:identifier>
@@ -132,7 +132,7 @@
     <dct:description xml:lang="en">Datex is the Swedish Transport Administration resource.</dct:description>
     <dcat:accessURL rdf:resource="http://www.trafikverket.se/tjanster/x/"/>
     <dct:rights>
-      <dct:RightsStatement rdf:nodeID="n809100d860d74c83a7d7efd928546c54b10">
+      <dct:RightsStatement rdf:nodeID="nc33c8d840da14b27b25bff8f466872fab10">
         <dct:type rdf:resource="https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"/>
       </dct:RightsStatement>
     </dct:rights>
@@ -160,7 +160,7 @@
     <adms:sample rdf:resource="http://www.trafikverket.se/tjanster/x/sample.xml"/>
     <adms:status rdf:resource="http://publications.europa.eu/resource/authority/distribution-status/ONGOING"/>
     <dct:temporal>
-      <dct:PeriodOfTime rdf:nodeID="n809100d860d74c83a7d7efd928546c54b11">
+      <dct:PeriodOfTime rdf:nodeID="nc33c8d840da14b27b25bff8f466872fab11">
         <dcat:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-08-12T00:00:00</dcat:startDate>
         <dcat:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2030-12-31T23:59:59.999000</dcat:endDate>
       </dct:PeriodOfTime>

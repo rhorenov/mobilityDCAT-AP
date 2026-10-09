@@ -1,16 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:sh="http://www.w3.org/ns/shacl#"
   xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:dct="http://purl.org/dc/terms/"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueRecordDeprecation_Shape">
+    <rdfs:label xml:lang="en">Catalogue Record deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    <sh:property>
+      <rdf:Description rdf:nodeID="n72ca9d83f9584c62a75960f1c3e25926b2">
+        <sh:path rdf:resource="http://purl.org/dc/terms/created"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+        <sh:message xml:lang="en">dct:created is deprecated in mobilityDCAT-AP 3.0.0; use dct:issued (#167).</sh:message>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueDeprecation_Shape">
+    <rdfs:label xml:lang="en">Catalogue deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+    <sh:property>
+      <rdf:Description rdf:nodeID="n72ca9d83f9584c62a75960f1c3e25926b1">
+        <sh:path rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+        <sh:message xml:lang="en">dct:isPartOf is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dct:hasPart on the parent Catalogue.</sh:message>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DistributionDeprecation_Shape">
+    <rdfs:label xml:lang="en">Distribution deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <sh:property>
+      <rdf:Description rdf:nodeID="n72ca9d83f9584c62a75960f1c3e25926b4">
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#grammar"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+        <sh:message xml:lang="en">mobilitydcatap:grammar is deprecated in mobilityDCAT-AP 3.0.0; use dct:conformsTo (#90).</sh:message>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
   <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DatasetDeprecation_Shape">
     <rdfs:label xml:lang="en">Dataset deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
     <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
     <sh:property>
-      <rdf:Description rdf:nodeID="nb349edbfad4a4f75aaa973306af692adb3">
+      <rdf:Description rdf:nodeID="n72ca9d83f9584c62a75960f1c3e25926b3">
         <sh:path rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
         <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
         <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
@@ -22,7 +58,7 @@
     <rdfs:label xml:lang="en">Licence Document deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
     <sh:targetClass rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
     <sh:property>
-      <rdf:Description rdf:nodeID="nb349edbfad4a4f75aaa973306af692adb5">
+      <rdf:Description rdf:nodeID="n72ca9d83f9584c62a75960f1c3e25926b5">
         <sh:path rdf:resource="http://purl.org/dc/terms/identifier"/>
         <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
         <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
@@ -30,7 +66,7 @@
       </rdf:Description>
     </sh:property>
     <sh:property>
-      <rdf:Description rdf:nodeID="nb349edbfad4a4f75aaa973306af692adb6">
+      <rdf:Description rdf:nodeID="n72ca9d83f9584c62a75960f1c3e25926b6">
         <sh:path rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
         <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
@@ -38,15 +74,47 @@
       </rdf:Description>
     </sh:property>
   </sh:NodeShape>
-  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueDeprecation_Shape">
-    <rdfs:label xml:lang="en">Catalogue deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
-    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#RightsStatementDeprecation_Shape">
+    <rdfs:label xml:lang="en">Rights Statement deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
+    <sh:targetClass rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
     <sh:property>
-      <rdf:Description rdf:nodeID="nb349edbfad4a4f75aaa973306af692adb1">
-        <sh:path rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+      <rdf:Description rdf:nodeID="n72ca9d83f9584c62a75960f1c3e25926b7">
+        <sh:path rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
         <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
-        <sh:message xml:lang="en">dct:isPartOf is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dct:hasPart on the parent Catalogue.</sh:message>
+        <sh:message xml:lang="en">rdfs:label on dct:RightsStatement is deprecated in mobilityDCAT-AP 3.0.0; use dct:description.</sh:message>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#QualityAnnotationDeprecation_Shape">
+    <rdfs:label xml:lang="en">Quality Annotation deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
+    <sh:targetClass rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
+    <sh:property>
+      <rdf:Description rdf:nodeID="n72ca9d83f9584c62a75960f1c3e25926b8">
+        <sh:path rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+        <sh:message xml:lang="en">oa:hasTarget is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dqv:hasQualityAnnotation on the Dataset.</sh:message>
+      </rdf:Description>
+    </sh:property>
+  </sh:NodeShape>
+  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#MobilityDataStandardDeprecation_Shape">
+    <rdfs:label xml:lang="en">Mobility Data Standard deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
+    <sh:targetClass rdf:resource="https://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
+    <sh:property>
+      <rdf:Description rdf:nodeID="n72ca9d83f9584c62a75960f1c3e25926b9">
+        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#schema"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+        <sh:message xml:lang="en">mobilitydcatap:schema is deprecated in mobilityDCAT-AP 3.0.0; use dct:conformsTo (#153).</sh:message>
+      </rdf:Description>
+    </sh:property>
+    <sh:property>
+      <rdf:Description rdf:nodeID="n72ca9d83f9584c62a75960f1c3e25926b10">
+        <sh:path rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
+        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
+        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
+        <sh:message xml:lang="en">owl:versionInfo is deprecated on Mobility Data Standard; use dcat:version.</sh:message>
       </rdf:Description>
     </sh:property>
   </sh:NodeShape>
@@ -55,72 +123,4 @@
     <dct:description xml:lang="en">Warning shapes for properties deprecated in mobilityDCAT-AP 3.0.0 (spec Appendix A.2).</dct:description>
     <owl:versionInfo>3.0.0</owl:versionInfo>
   </owl:Ontology>
-  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#RightsStatementDeprecation_Shape">
-    <rdfs:label xml:lang="en">Rights Statement deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
-    <sh:targetClass rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
-    <sh:property>
-      <rdf:Description rdf:nodeID="nb349edbfad4a4f75aaa973306af692adb7">
-        <sh:path rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
-        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
-        <sh:message xml:lang="en">rdfs:label on dct:RightsStatement is deprecated in mobilityDCAT-AP 3.0.0; use dct:description.</sh:message>
-      </rdf:Description>
-    </sh:property>
-  </sh:NodeShape>
-  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#DistributionDeprecation_Shape">
-    <rdfs:label xml:lang="en">Distribution deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
-    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-    <sh:property>
-      <rdf:Description rdf:nodeID="nb349edbfad4a4f75aaa973306af692adb4">
-        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#grammar"/>
-        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
-        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
-        <sh:message xml:lang="en">mobilitydcatap:grammar is deprecated in mobilityDCAT-AP 3.0.0; use dct:conformsTo (#90).</sh:message>
-      </rdf:Description>
-    </sh:property>
-  </sh:NodeShape>
-  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#MobilityDataStandardDeprecation_Shape">
-    <rdfs:label xml:lang="en">Mobility Data Standard deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
-    <sh:targetClass rdf:resource="https://w3id.org/mobilitydcat-ap#MobilityDataStandard"/>
-    <sh:property>
-      <rdf:Description rdf:nodeID="nb349edbfad4a4f75aaa973306af692adb9">
-        <sh:path rdf:resource="https://w3id.org/mobilitydcat-ap#schema"/>
-        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
-        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
-        <sh:message xml:lang="en">mobilitydcatap:schema is deprecated in mobilityDCAT-AP 3.0.0; use dct:conformsTo (#153).</sh:message>
-      </rdf:Description>
-    </sh:property>
-    <sh:property>
-      <rdf:Description rdf:nodeID="nb349edbfad4a4f75aaa973306af692adb10">
-        <sh:path rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>
-        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
-        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
-        <sh:message xml:lang="en">owl:versionInfo is deprecated on Mobility Data Standard; use dcat:version.</sh:message>
-      </rdf:Description>
-    </sh:property>
-  </sh:NodeShape>
-  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#QualityAnnotationDeprecation_Shape">
-    <rdfs:label xml:lang="en">Quality Annotation deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
-    <sh:targetClass rdf:resource="http://www.w3.org/ns/dqv#QualityAnnotation"/>
-    <sh:property>
-      <rdf:Description rdf:nodeID="nb349edbfad4a4f75aaa973306af692adb8">
-        <sh:path rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
-        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
-        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
-        <sh:message xml:lang="en">oa:hasTarget is deprecated in mobilityDCAT-AP 3.0.0 (inverse property); use dqv:hasQualityAnnotation on the Dataset.</sh:message>
-      </rdf:Description>
-    </sh:property>
-  </sh:NodeShape>
-  <sh:NodeShape rdf:about="https://w3id.org/mobilitydcat-ap/releases/3.0.0/shacl/deprecated-uris#CatalogueRecordDeprecation_Shape">
-    <rdfs:label xml:lang="en">Catalogue Record deprecated properties (mobilityDCAT-AP 3.0.0)</rdfs:label>
-    <sh:targetClass rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
-    <sh:property>
-      <rdf:Description rdf:nodeID="nb349edbfad4a4f75aaa973306af692adb2">
-        <sh:path rdf:resource="http://purl.org/dc/terms/created"/>
-        <sh:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sh:maxCount>
-        <sh:severity rdf:resource="http://www.w3.org/ns/shacl#Warning"/>
-        <sh:message xml:lang="en">dct:created is deprecated in mobilityDCAT-AP 3.0.0; use dct:issued (#167).</sh:message>
-      </rdf:Description>
-    </sh:property>
-  </sh:NodeShape>
 </rdf:RDF>

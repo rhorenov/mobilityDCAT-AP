@@ -74,18 +74,6 @@
     ]
   },
   {
-    "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Agent"
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@language": "sv",
-        "@value": "Trafikverket"
-      }
-    ]
-  },
-  {
     "@id": "https://www.trafficdata.se/dataset/ec459578-a11f-4728-acaa-16b08ae45cfa/resource/4d2cccaf-219f-4fe6-a22c-d695ce86699d",
     "@type": [
       "http://www.w3.org/ns/dcat#Distribution"
@@ -97,7 +85,7 @@
     ],
     "http://purl.org/dc/terms/rights": [
       {
-        "@id": "_:nf2245b2893f14eb9ac9a36f7603c9b3ab1"
+        "@id": "_:n0bb8035885ac4c4bbe8a1e5a571d43c7b1"
       }
     ],
     "http://www.w3.org/ns/dcat#accessURL": [
@@ -112,13 +100,25 @@
     ]
   },
   {
-    "@id": "_:nf2245b2893f14eb9ac9a36f7603c9b3ab1",
+    "@id": "_:n0bb8035885ac4c4bbe8a1e5a571d43c7b1",
     "@type": [
       "http://purl.org/dc/terms/RightsStatement"
     ],
     "http://purl.org/dc/terms/type": [
       {
         "@id": "https://w3id.org/mobilitydcat-ap/conditions-for-access-and-usage/licence-provided"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "sv",
+        "@value": "Trafikverket"
       }
     ]
   },

@@ -1,5 +1,11 @@
 [
   {
+    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0",
+    "@type": [
+      "http://purl.org/dc/terms/Standard"
+    ]
+  },
+  {
     "@id": "https://www.trafficdata.se/dataset/traffic-signs-expressing-traffic-regulations-and-identifying-dangers-speed-limits",
     "@type": [
       "http://www.w3.org/ns/dcat#CatalogRecord"
@@ -117,7 +123,7 @@
     ],
     "http://purl.org/dc/terms/temporal": [
       {
-        "@id": "_:n809100d860d74c83a7d7efd928546c54b9"
+        "@id": "_:nc33c8d840da14b27b25bff8f466872fab9"
       }
     ],
     "http://purl.org/dc/terms/title": [
@@ -128,7 +134,7 @@
     ],
     "http://www.w3.org/ns/adms#identifier": [
       {
-        "@id": "_:n809100d860d74c83a7d7efd928546c54b8"
+        "@id": "_:nc33c8d840da14b27b25bff8f466872fab8"
       }
     ],
     "http://www.w3.org/ns/adms#versionNotes": [
@@ -139,7 +145,7 @@
     ],
     "http://www.w3.org/ns/dcat#contactPoint": [
       {
-        "@id": "_:n809100d860d74c83a7d7efd928546c54b2"
+        "@id": "_:nc33c8d840da14b27b25bff8f466872fab2"
       }
     ],
     "http://www.w3.org/ns/dcat#distribution": [
@@ -154,7 +160,7 @@
     ],
     "http://www.w3.org/ns/dcat#inSeries": [
       {
-        "@id": "_:n809100d860d74c83a7d7efd928546c54b7"
+        "@id": "_:nc33c8d840da14b27b25bff8f466872fab7"
       }
     ],
     "http://www.w3.org/ns/dcat#keyword": [
@@ -183,7 +189,7 @@
     ],
     "http://www.w3.org/ns/dqv#hasQualityAnnotation": [
       {
-        "@id": "_:n809100d860d74c83a7d7efd928546c54b5"
+        "@id": "_:nc33c8d840da14b27b25bff8f466872fab5"
       }
     ],
     "http://xmlns.com/foaf/0.1/page": [
@@ -193,7 +199,7 @@
     ],
     "https://w3id.org/mobilitydcat-ap#assessmentResult": [
       {
-        "@id": "_:n809100d860d74c83a7d7efd928546c54b3"
+        "@id": "_:nc33c8d840da14b27b25bff8f466872fab3"
       }
     ],
     "https://w3id.org/mobilitydcat-ap#georeferencingMethod": [
@@ -232,7 +238,7 @@
     ]
   },
   {
-    "@id": "_:n809100d860d74c83a7d7efd928546c54b2",
+    "@id": "_:nc33c8d840da14b27b25bff8f466872fab2",
     "@type": [
       "http://www.w3.org/2006/vcard/ns#Kind",
       "http://www.w3.org/2006/vcard/ns#Organization"
@@ -249,18 +255,18 @@
     ]
   },
   {
-    "@id": "_:n809100d860d74c83a7d7efd928546c54b3",
+    "@id": "_:nc33c8d840da14b27b25bff8f466872fab3",
     "@type": [
       "https://w3id.org/mobilitydcat-ap#Assessment"
     ],
     "http://www.w3.org/ns/oa#hasBody": [
       {
-        "@id": "_:n809100d860d74c83a7d7efd928546c54b4"
+        "@id": "_:nc33c8d840da14b27b25bff8f466872fab4"
       }
     ]
   },
   {
-    "@id": "_:n809100d860d74c83a7d7efd928546c54b4",
+    "@id": "_:nc33c8d840da14b27b25bff8f466872fab4",
     "@type": [
       "http://www.w3.org/ns/oa#TextualBody"
     ],
@@ -272,18 +278,18 @@
     ]
   },
   {
-    "@id": "_:n809100d860d74c83a7d7efd928546c54b5",
+    "@id": "_:nc33c8d840da14b27b25bff8f466872fab5",
     "@type": [
       "http://www.w3.org/ns/dqv#QualityAnnotation"
     ],
     "http://www.w3.org/ns/oa#hasBody": [
       {
-        "@id": "_:n809100d860d74c83a7d7efd928546c54b6"
+        "@id": "_:nc33c8d840da14b27b25bff8f466872fab6"
       }
     ]
   },
   {
-    "@id": "_:n809100d860d74c83a7d7efd928546c54b6",
+    "@id": "_:nc33c8d840da14b27b25bff8f466872fab6",
     "@type": [
       "http://www.w3.org/ns/oa#TextualBody"
     ],
@@ -295,7 +301,7 @@
     ]
   },
   {
-    "@id": "_:n809100d860d74c83a7d7efd928546c54b7",
+    "@id": "_:nc33c8d840da14b27b25bff8f466872fab7",
     "@type": [
       "http://www.w3.org/ns/dcat#DatasetSeries"
     ],
@@ -313,7 +319,7 @@
     ]
   },
   {
-    "@id": "_:n809100d860d74c83a7d7efd928546c54b8",
+    "@id": "_:nc33c8d840da14b27b25bff8f466872fab8",
     "@type": [
       "http://www.w3.org/ns/adms#Identifier"
     ],
@@ -324,7 +330,7 @@
     ]
   },
   {
-    "@id": "_:n809100d860d74c83a7d7efd928546c54b9",
+    "@id": "_:nc33c8d840da14b27b25bff8f466872fab9",
     "@type": [
       "http://purl.org/dc/terms/PeriodOfTime"
     ],
@@ -338,56 +344,6 @@
       {
         "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
         "@value": "2026-08-12T00:00:00"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mobilitydcat-ap/releases/3.0.0",
-    "@type": [
-      "http://purl.org/dc/terms/Standard"
-    ]
-  },
-  {
-    "@id": "https://www.trafficdata.se/standard/datex-II-v3.2",
-    "@type": [
-      "https://w3id.org/mobilitydcat-ap#MobilityDataStandard"
-    ],
-    "http://purl.org/dc/terms/conformsTo": [
-      {
-        "@id": "https://docs.datex2.eu/v3.2/_static/data/Exchange/2020/exchangexsd.zip"
-      }
-    ],
-    "http://purl.org/dc/terms/title": [
-      {
-        "@language": "en",
-        "@value": "Datex II version 3.2"
-      }
-    ],
-    "http://www.w3.org/ns/dcat#version": [
-      {
-        "@value": "3.2"
-      }
-    ]
-  },
-  {
-    "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b",
-    "@type": [
-      "http://xmlns.com/foaf/0.1/Agent"
-    ],
-    "http://xmlns.com/foaf/0.1/mbox": [
-      {
-        "@id": "mailto:datex@trafikverket.se"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/name": [
-      {
-        "@language": "sv",
-        "@value": "Trafikverket"
-      }
-    ],
-    "http://xmlns.com/foaf/0.1/workplaceHomepage": [
-      {
-        "@id": "https://www.trafikverket.se"
       }
     ]
   },
@@ -441,12 +397,12 @@
     ],
     "http://purl.org/dc/terms/rights": [
       {
-        "@id": "_:n809100d860d74c83a7d7efd928546c54b10"
+        "@id": "_:nc33c8d840da14b27b25bff8f466872fab10"
       }
     ],
     "http://purl.org/dc/terms/temporal": [
       {
-        "@id": "_:n809100d860d74c83a7d7efd928546c54b11"
+        "@id": "_:nc33c8d840da14b27b25bff8f466872fab11"
       }
     ],
     "http://purl.org/dc/terms/title": [
@@ -511,7 +467,7 @@
     ]
   },
   {
-    "@id": "_:n809100d860d74c83a7d7efd928546c54b10",
+    "@id": "_:nc33c8d840da14b27b25bff8f466872fab10",
     "@type": [
       "http://purl.org/dc/terms/RightsStatement"
     ],
@@ -522,7 +478,7 @@
     ]
   },
   {
-    "@id": "_:n809100d860d74c83a7d7efd928546c54b11",
+    "@id": "_:nc33c8d840da14b27b25bff8f466872fab11",
     "@type": [
       "http://purl.org/dc/terms/PeriodOfTime"
     ],
@@ -536,6 +492,50 @@
       {
         "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
         "@value": "2026-08-12T00:00:00"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.trafficdata.se/standard/datex-II-v3.2",
+    "@type": [
+      "https://w3id.org/mobilitydcat-ap#MobilityDataStandard"
+    ],
+    "http://purl.org/dc/terms/conformsTo": [
+      {
+        "@id": "https://docs.datex2.eu/v3.2/_static/data/Exchange/2020/exchangexsd.zip"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Datex II version 3.2"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#version": [
+      {
+        "@value": "3.2"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.trafficdata.se/organization/0a3a8800-a545-4538-a2ab-e7a11246ff9b",
+    "@type": [
+      "http://xmlns.com/foaf/0.1/Agent"
+    ],
+    "http://xmlns.com/foaf/0.1/mbox": [
+      {
+        "@id": "mailto:datex@trafikverket.se"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/name": [
+      {
+        "@language": "sv",
+        "@value": "Trafikverket"
+      }
+    ],
+    "http://xmlns.com/foaf/0.1/workplaceHomepage": [
+      {
+        "@id": "https://www.trafikverket.se"
       }
     ]
   },
@@ -600,7 +600,7 @@
     ],
     "http://www.w3.org/ns/adms#identifier": [
       {
-        "@id": "_:n809100d860d74c83a7d7efd928546c54b1"
+        "@id": "_:nc33c8d840da14b27b25bff8f466872fab1"
       }
     ],
     "http://www.w3.org/ns/dcat#dataset": [
@@ -625,7 +625,7 @@
     ]
   },
   {
-    "@id": "_:n809100d860d74c83a7d7efd928546c54b1",
+    "@id": "_:nc33c8d840da14b27b25bff8f466872fab1",
     "@type": [
       "http://www.w3.org/ns/adms#Identifier"
     ],
