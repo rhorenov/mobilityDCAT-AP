@@ -27,16 +27,19 @@ drifted apart:
 | `releases/1.1.0/` | An older rendered copy, without the later hand edits; its `figures/` directory is missing, so its UML diagrams do not load | Reference only |
 | `drafts/latest/` | The 3.0.0 draft, moved to `src/` on `main` | Not used |
 
-The Turtle ontology was the same in all three 1.1.0 copies. The SHACL shapes
+The ontology files were the same in all three 1.1.0 copies. The SHACL shapes
 were the same apart from line endings (CRLF in the draft, LF in the published
 copies). The examples were the same files.
+
+The ontology itself is kept in RDF/XML, its original source format; see
+[Ontology source](#ontology-source).
 
 ## Moved and renamed
 
 | From | To |
 |------|----|
 | `drafts/1.1.0-draft-0.1/` | `src/` |
-| `drafts/1.1.0-draft-0.1/mobilitydcat-ap_v1.1.0.ttl` | `src/mobilitydcat-ap.ttl` |
+| `drafts/1.1.0-draft-0.1/mobilitydcat-ap_v1.1.0.ttl` | `src/mobilitydcat-ap.ttl` (removed again when the RDF/XML became the source) |
 
 `src/shaclShapes/` and `src/enterpriseArchitectFiles/` keep their names, which
 are part of the published URLs under `releases/1.1.0/`. (On `main` the SHACL
@@ -46,7 +49,7 @@ directory is `src/shacl/`.)
 
 | File | Why |
 |------|-----|
-| `src/mobilitydcat-ap_v1.1.0.rdf`, `src/mobilitydcat-ap_v1.1.0.jsonld` | Generated from the Turtle by the build. The committed files were not equivalent to the Turtle: about 35 triples differ, mostly OWL declarations from a Protégé export. |
+| `src/mobilitydcat-ap_v1.1.0.rdf`, `src/mobilitydcat-ap_v1.1.0.jsonld` | Taken to be generated, with the Turtle as source, as on `main`. Reverted for the RDF/XML, which became the source again. |
 | `src/scripts/*.sh`, `src/scripts/*.php` | Old build scripts, replaced by the Python build from `main` |
 | `src/README.md` | Pointed at `drafts/latest/`, which is the 3.0.0 draft |
 
@@ -84,8 +87,8 @@ Copied and adapted:
 |------|--------------------|
 | `pyproject.toml`, `uv.lock` | `pyshacl` removed (only `validate-examples.py` used it); `uv.lock` regenerated with `uv lock` |
 | `.mise.toml` | `validate-examples` task removed; `serialise` description updated |
-| `src/scripts/serialise.py` | Serialises only the ontology. The examples (Turtle and RDF/XML, both maintained by hand) and the SHACL shapes (Turtle only) are published as they are. |
-| `src/scripts/copy-assets.py` | Copies `mobilitydcat-ap.ttl`, `examples/`, `figures/`, `shaclShapes/`, `enterpriseArchitectFiles/` |
+| `src/scripts/serialise.py` | Serialises only the ontology, from RDF/XML to Turtle, JSON-LD and N-Triples. The examples (Turtle and RDF/XML, both maintained by hand) and the SHACL shapes (Turtle only) are published as they are. |
+| `src/scripts/copy-assets.py` | Copies `mobilitydcat-ap.rdf`, `examples/`, `figures/`, `shaclShapes/`, `enterpriseArchitectFiles/` |
 | `src/scripts/build-spec.py` | `--use-local` dropped: it only replaces a ReSpec loaded from w3.org, and this page loads the NAPCORE profile from `src/js/`. `--haltonerror` added when the `CI` environment variable is set, so a failed reference lookup fails the build on GitHub |
 | `.github/workflows/reusable-build.yml` | SHACL imports cache steps removed (only `validate-examples.py` used them) |
 
@@ -163,6 +166,48 @@ published page, `e531599` in the source), Daham Mohammed Mustafa as editor in
 considerations but kept its closing tag. `src/index.html`: `described</a>` →
 `described`.
 
+## Ontology source
+
+On `main`, Turtle is the source of the ontology. 1.1.0 was set up the other
+way round, and the conversion first followed `main`, then returned to the 1.1.0
+approach.
+
+How 1.1.0 was set up:
+
+- `scripts/serialise-vocabulary.sh` took every `*.rdf` and generated the `.ttl`
+  and `.jsonld` from it with `rdfpipe`.
+- `catalog-v001.xml` is a Protégé import catalog, and the RDF/XML is Protégé
+  output (`<?xml version="1.0"?>`, `xml:base`, `<!-- -->` section comments, OWL
+  declarations). The JSON-LD is in the expanded form of the OWL API export.
+
+How it was done in practice: the three files were edited by hand in parallel
+from at least November 2024, mostly in commits that change all three. They
+were never equivalent, not even at the release (`33521d2`, 2025-01-17, about
+75 triples different each way). At `fc6cb37`, the content (labels, comments,
+definitions) is the same in all three, and they differ in:
+
+| Only in the Turtle (35 triples) | Only in the RDF/XML (34 triples) |
+|---------------------------------|----------------------------------|
+| `rdf:type rdf:Property` on 35 properties (`dct:publisher`, `foaf:mbox`, `mobilitydcatap:mobilityTheme`, ...) | OWL declarations from Protégé: `owl:Class`, `owl:ObjectProperty`, `owl:AnnotationProperty`, `rdfs:Datatype` and `owl:NamedIndividual` on 33 terms |
+| | the `rdfs:comment` of `dcat:temporalResolution`, removed from the other two in `8398ce7` |
+
+What the build does now:
+
+| File | How |
+|------|-----|
+| `src/mobilitydcat-ap.rdf` | Source, restored from `fc6cb37` (`drafts/1.1.0-draft-0.1/mobilitydcat-ap_v1.1.0.rdf`, the same file as the published `releases/1.1.0/mobilitydcat-ap.rdf`); published as it is |
+| `mobilitydcat-ap.ttl`, `.jsonld`, `.nt` | Generated from it by `serialise.py` with rdflib (the library behind `rdfpipe`), checked by round trip |
+
+The generated Turtle uses the prefixes declared in the RDF/XML, with
+`mobilitydcatap:` for the ontology namespace (the RDF/XML declares it both as
+the default namespace and as `mobilitydcatap:`, and the parser keeps only the
+first). rdflib's own prefixes are not used, so `dct:` stays `dct:`.
+
+The fix of `8398ce7` is ported to the RDF/XML: `8398ce7` removed
+`dcat:temporalResolution` from the Turtle and JSON-LD and left the RDF/XML,
+stating the property was not in it. It was, with the comment "In GeoDCAT-AP,
+this property is used as in DCAT and DCAT-AP."
+
 ## Documentation
 
 | File | Content |
@@ -183,7 +228,9 @@ A full build from a fresh clone, run with the steps of `mise run lint`:
   because the stray tags are fixed.
 - Every file published under `releases/1.1.0/` and `releases/latest/` on
   `gh-pages` (`2886909`) is in `dist/`.
-- The generated `.rdf`, `.jsonld` and `.nt` are byte-identical between builds.
+- The generated `.ttl`, `.jsonld` and `.nt` are equivalent to
+  `src/mobilitydcat-ap.rdf` (isomorphic graphs) and byte-identical between
+  builds.
 - `build-check.yml` on GitHub succeeded.
 
 The visible text of the build was compared with the published root page
@@ -221,8 +268,14 @@ Compared with what is published now:
   has it today;
 - `releases/1.1.0/` gets `figures/`, so its UML diagrams load again, and the
   Enterprise Architect documentation page;
-- `mobilitydcat-ap.rdf` and `mobilitydcat-ap.jsonld` are regenerated from the
-  Turtle (about 35 triples different from the published files);
+- `mobilitydcat-ap.rdf` is the published file without the
+  `dcat:temporalResolution` comment (one triple);
+- `mobilitydcat-ap.ttl` is generated from the RDF/XML: compared with the
+  published file it has the 33 OWL declarations of the RDF/XML instead of the
+  35 `rdf:Property` declarations, and it is formatted by rdflib. w3id.org
+  serves this file to clients that ask for Turtle;
+- `mobilitydcat-ap.jsonld` is generated from the RDF/XML (38 triples different
+  each way from the published file, which had drifted from both others);
 - `mobilitydcat-ap.nt` is new.
 
 The files in the root of `releases/` are not touched.
@@ -242,5 +295,10 @@ The files in the root of `releases/` are not touched.
 - `REPOSITORY.md` on `main` still says that `release/1.1.0` has no build.
 - The change log (Annex H.1) links `./mobilitydcat-ap_shacl_shapes.ttl`, which
   was removed in `f7442a9`; the link is broken on the published page too.
+- `src/catalog-v001.xml` maps `https://w3id.org/mobilitydcatap` to
+  `mobilitydcatap.rdf`, a file name from before 1.1.0; the source is now
+  `mobilitydcat-ap.rdf`.
+- The 35 `rdf:Property` declarations of the old Turtle are not in the RDF/XML.
+  If they are wanted, add them to `src/mobilitydcat-ap.rdf`.
 - There is no SHACL validation of the 1.1.0 examples; `validate-examples.py`
   from `main` would have to be adapted to the 1.1.0 shapes.
