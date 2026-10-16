@@ -649,7 +649,7 @@ table code, table pre {
 
 </section>
 
-<!-- Data Service; PL edited 04.07.23- -->-->
+<!-- Data Service; PL edited 04.07.23 -->
 
 <section id="properties-for-data-service">
 
@@ -975,7 +975,7 @@ table code, table pre {
 <aside class="note">
 <p>The following recommended property is removed from [[DCAT-AP-v2.0.1]]:</p>
 <ul>
-<li>-licence type</li>>
+<li>-licence type</li>
 </ul>
 </aside>
 
@@ -1064,7 +1064,7 @@ table code, table pre {
 
 <h3>+Mobility Data Standard</h3>
 
-<div data-include-format="html" data-include-replace="true" data-include="./tables/class-mobility-data-standard"></div>
+<div data-include-format="html" data-include-replace="true" data-include="./tables/class-mobility-data-standard.html"></div>
 
 <section id="optional-properties-for-mobility-data-standard">
 
@@ -1449,6 +1449,7 @@ This work was elaborated by the NAPCORE Sub-Working Group (SWG) 4.4 [[NAPCORE-Me
 
 <p> Editors of ReSpec documentation:</p>
 <ul>
+<li>Daham Mohammed Mustafa, <a href="https://www.fit.fraunhofer.de/en.html">Fraunhofer Institute for Applied Information Technology FIT</a>, Sankt Augustin, Germany</li>
 <li>Lina Teresa Molinas Comet, <a href="https://www.fit.fraunhofer.de/en.html">Fraunhofer Institute for Applied Information Technology FIT</a>, Sankt Augustin, Germany</li>
 <li>Peter Lubrich, <a href="https://www.bast.de/EN/Home/home_node.html">Federal Highway Research Institute (BASt)</a>, Bergisch Gladbach, Germany</li>
 <li>Mario Scrocca, <a href="https://www.cefriel.com/?lang=en">Cefriel</a>, Milano, Italy</li>
@@ -1605,13 +1606,13 @@ This includes additional explanations and examples for specific vocabulary eleme
 <!-- mobilityDCAT-AP Validation Guidance -->
 <section id="validation-guidance" class="appendix">
 <h2>mobilityDCAT-AP Validation Guidance</h2>
-<p>Three SHACL files enabling the automated validation of mobilityDCAT-AP 1.1.0 instances are available in <a href="./shaclShapes">this Github subfolder</a>. All three files extend and inherit from <a href="https://semiceu.github.io/DCAT-AP/releases/2.0.1/">DCAT-AP 2.0.1</a> SHACL shapes:</p>
+<p>Three SHACL files enabling the automated validation of mobilityDCAT-AP 1.1.0 instances are available in <a href="./shaclShapes">this Github subfolder</a>. All three files extend <a href="https://semiceu.github.io/DCAT-AP/releases/2.0.1/">DCAT-AP 2.0.1</a> SHACL shapes:</p>
 <ul>
-<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_shapes.ttl">Basic validation</a> — cardinality, datatype and literal constraints</li>
-<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_range.ttl">Range validation</a> — nodeKind and class membership for object properties</li>
-<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl">Controlled vocabulary validation</a> — property values must be from correct vocabularies per §5.2</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_shapes.ttl">Basic validation</a>: cardinality, datatype and literal constraints</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_range.ttl">Range validation</a>: nodeKind and class membership for object properties</li>
+<li><a href="./shaclShapes/mobilitydcat-ap_1.1.0_shacl_mdr-vocabularies.shape.ttl">Controlled vocabulary validation</a>: property values must be from correct vocabularies per §5.2</li>
 </ul>
-<p>A dedicated validation toolkit — including Python scripts, Docker setup, and test cases — is available in the <a href="https://github.com/mobilityDCAT-AP/validation">mobilityDCAT-AP validation repository</a>.</p>
+<p>A dedicated validation toolkit, including Python scripts, Docker setup, and test cases, is available in the <a href="https://github.com/mobilityDCAT-AP/validation">mobilityDCAT-AP validation repository</a>.</p>
 <p>Further guidance can be found in the <a href="https://github.com/mobilityDCAT-AP/mobilityDCAT-AP/wiki/Chapter-4:-Validating-mobilityDCAT%E2%80%90AP-via-SHACL">validation section of the Wikipage</a>.</p>
 </section>
   
