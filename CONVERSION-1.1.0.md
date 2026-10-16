@@ -208,6 +208,14 @@ The fix of `8398ce7` is ported to the RDF/XML: `8398ce7` removed
 stating the property was not in it. It was, with the comment "In GeoDCAT-AP,
 this property is used as in DCAT and DCAT-AP."
 
+The 35 `rdf:type rdf:Property` triples of the old Turtle are added to the
+RDF/XML: one `<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>`
+line per property, as the first child of its element (29 `owl:ObjectProperty`,
+6 `rdf:Description`; where a property also has a one-line
+`owl:AnnotationProperty` declaration, the element with a body is used). No
+other triple changes. With it, the RDF/XML holds every triple of the old
+Turtle, plus the 33 OWL declarations only the RDF/XML had.
+
 ## Documentation
 
 | File | Content |
@@ -268,14 +276,15 @@ Compared with what is published now:
   has it today;
 - `releases/1.1.0/` gets `figures/`, so its UML diagrams load again, and the
   Enterprise Architect documentation page;
-- `mobilitydcat-ap.rdf` is the published file without the
-  `dcat:temporalResolution` comment (one triple);
-- `mobilitydcat-ap.ttl` is generated from the RDF/XML: compared with the
-  published file it has the 33 OWL declarations of the RDF/XML instead of the
-  35 `rdf:Property` declarations, and it is formatted by rdflib. w3id.org
-  serves this file to clients that ask for Turtle;
-- `mobilitydcat-ap.jsonld` is generated from the RDF/XML (38 triples different
-  each way from the published file, which had drifted from both others);
+- `mobilitydcat-ap.rdf` is the published file with the 35 `rdf:Property`
+  types added and the `dcat:temporalResolution` comment removed;
+- `mobilitydcat-ap.ttl` is generated from the RDF/XML: it has every triple of
+  the published file, plus the 33 OWL declarations of the RDF/XML, and it is
+  formatted by rdflib. w3id.org serves this file to clients that ask for
+  Turtle;
+- `mobilitydcat-ap.jsonld` is generated from the RDF/XML (73 triples added and
+  38 removed compared with the published file, which had drifted from both
+  others);
 - `mobilitydcat-ap.nt` is new.
 
 The files in the root of `releases/` are not touched.
@@ -298,7 +307,5 @@ The files in the root of `releases/` are not touched.
 - `src/catalog-v001.xml` maps `https://w3id.org/mobilitydcatap` to
   `mobilitydcatap.rdf`, a file name from before 1.1.0; the source is now
   `mobilitydcat-ap.rdf`.
-- The 35 `rdf:Property` declarations of the old Turtle are not in the RDF/XML.
-  If they are wanted, add them to `src/mobilitydcat-ap.rdf`.
 - There is no SHACL validation of the 1.1.0 examples; `validate-examples.py`
   from `main` would have to be adapted to the 1.1.0 shapes.
