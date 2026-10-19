@@ -18,14 +18,12 @@ on:
 
 jobs:
   build:
-    # A fixed image, not ubuntu-latest: the runner changes only with a commit
+    # A fixed Ubuntu release, not ubuntu-latest. GitHub still updates the
+    # image weekly, which is why ReSpec does not render with its Chrome.
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     outputs:
       artifact_name: ${{ inputs.artifact_name }}
-    env:
-      # Also stops puppeteer from downloading its own Chrome
-      PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
 
     steps:
       - name: Checkout source
@@ -46,6 +44,16 @@ jobs:
             ~/.cache/uv
           key: deps-${{ runner.os }}-${{ hashFiles('package-lock.json', 'uv.lock') }}
           restore-keys: deps-${{ runner.os }}-
+
+      # The Chrome build puppeteer pins, installed by `mise run install`, so CI
+      # renders with the same browser as a local build. Keyed on the lockfile:
+      # a puppeteer update brings a new Chrome and starts an empty cache. No
+      # restore-keys, so old Chrome builds do not pile up in it.
+      - name: Restore Chrome cache
+        uses: actions/cache@v6
+        with:
+          path: ~/.cache/puppeteer
+          key: chrome-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
       - name: Install dependencies
         run: mise run install

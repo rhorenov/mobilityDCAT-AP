@@ -9,9 +9,13 @@ _.path = ["{{cwd}}/node_modules/.bin"]
 # ── Tasks ────────────────────────────────────────────────────────────────────
 
 [tasks.install]
-description = "Install all project dependencies (npm + uv sync)"
+description = "Install all project dependencies (npm + Chrome for ReSpec + uv sync)"
+# The Chrome step installs the build the locked puppeteer is tested with into
+# ~/.cache/puppeteer/, and does nothing if it is there already. It is explicit
+# because newer npm versions skip puppeteer's own postinstall download.
 run = [
   "npm install",
+  "puppeteer browsers install chrome",
   "uv sync",
 ]
 
