@@ -132,7 +132,7 @@ folder:
 ```sh
 mise trust          # once per clone; mise refuses an untrusted .mise.toml
 mise install        # Node.js and uv at the pinned versions
-mise run install    # npm install + uv sync
+mise run install    # npm install + Chrome for ReSpec + uv sync
 ```
 
 `DEVELOPMENT.md` covers installing mise on Windows and Linux.
