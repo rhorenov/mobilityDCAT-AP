@@ -58,6 +58,13 @@ jobs:
       - name: Install dependencies
         run: mise run install
 
+      # Ubuntu 24.04 uses AppArmor to block the unprivileged user namespaces
+      # Chrome's sandbox needs. The image's own Chrome falls back to a setuid
+      # helper; Chrome for Testing has none and refuses to start. Lifting the
+      # restriction on this throwaway runner keeps the sandbox on.
+      - name: Allow the Chrome sandbox
+        run: sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+
       - name: Build
         run: mise run build
 
