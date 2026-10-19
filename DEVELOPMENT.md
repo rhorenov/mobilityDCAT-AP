@@ -26,7 +26,8 @@ and from where:
 | Python 3.12, if not installed already | uv, on the first `uv sync` | github.com |
 | Python packages (rdflib, pyshacl, ...) | `uv sync` | pypi.org, files.pythonhosted.org |
 | npm packages (respec, puppeteer, ...) | `npm install` | registry.npmjs.org |
-| Chrome for Testing and Chrome Headless Shell, several hundred MB, into `~/.cache/puppeteer/` | puppeteer, during `npm install` | storage.googleapis.com |
+| Chrome for Testing, the version puppeteer pins, about 400 MB, into `~/.cache/puppeteer/` | `mise run install` | storage.googleapis.com |
+| Chrome Headless Shell, about 270 MB, into the same folder; the build does not use it | puppeteer, during `npm install`, on npm versions that run its install script | storage.googleapis.com |
 
 The build itself needs network access too: ReSpec looks up the references
 that `src/config.js` does not define itself (for example BCP47) at
@@ -63,7 +64,7 @@ step in the run log.
 ```sh
 mise trust            # once per clone: .mise.toml sets environment variables, so mise asks first
 mise install          # installs Node 24 and uv (uv installs Python 3.12, from .python-version, automatically)
-mise run install      # npm install + uv sync (creates .venv with all Python dependencies)
+mise run install      # npm install + Chrome for ReSpec + uv sync (creates .venv with all Python dependencies)
 ```
 
 ## Build
@@ -219,6 +220,7 @@ Turtle is the source format for the ontology, the examples and the SHACL shapes.
 |------|---------|-----------|---------|
 | Node.js | 24 | mise | Runtime for ReSpec |
 | respec | 36.0.0 | npm / `package.json` | Builds the HTML specification |
+| Chrome for Testing | the build puppeteer pins | puppeteer / `package-lock.json` | Renders the specification for ReSpec, locally and in CI |
 | uv | latest | mise | Python package manager |
 | Python | 3.12 | uv / `.python-version` | Runtime for build scripts |
 | rdflib | 7.6.0 | uv / `pyproject.toml` | RDF serialisation |
@@ -235,9 +237,13 @@ Turtle is the source format for the ontology, the examples and the SHACL shapes.
 Every publishing workflow builds through the reusable workflow
 `.github/workflows/reusable-build.yml`, which runs the same mise tasks as
 `mise run lint`, with the same tool versions from `.mise.toml`, on the
-runner image `ubuntu-24.04` (pinned in every workflow, so a new image is a
-change by commit, not by GitHub):
-`mise run install`, `mise run build`, then `mise run check`. Between the build
+runner image `ubuntu-24.04` (a fixed Ubuntu release in every workflow; GitHub
+still updates the image itself every week):
+`mise run install`, `mise run build`, then `mise run check`. ReSpec renders
+with the Chrome build puppeteer pins, the same one a local build uses, not
+with the Chrome on the runner image, so an image update does not change the
+rendered spec. CI caches it in `~/.cache/puppeteer`, keyed on
+`package-lock.json`. Between the build
 and the check it runs `mise run mark-draft`, unless the calling workflow passes
 no `draft_label`, which only `build-release.yml` does. The build is
 enforced; `check` runs with `continue-on-error`, so a failed check shows in the
